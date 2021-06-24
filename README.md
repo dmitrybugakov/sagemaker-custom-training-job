@@ -1,0 +1,1 @@
+**The repository contains a simple example of a container with LightGBM for AWS Sagemaker.** 

@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+from __future__ import print_function
+
+import sys
+
+from boosting import Boosting
+
+TR_CHANNEL_NAME = 'train'
+VL_CHANNEL_NAME = 'validation'
+MODEL_FILE_NAME = 'model'
+
+
+def train():
+    trainer = Boosting(train_channel=TR_CHANNEL_NAME,
+                       validation_channel=VL_CHANNEL_NAME,
+                       chunk_size=1000,
+                       model_file_name=MODEL_FILE_NAME)
+    return trainer.train()
+
+
+if __name__ == '__main__':
+    train()
+    sys.exit(0)
